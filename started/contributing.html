@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Contributing to pgmpy &#8212; pgmpy 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=c2b266e2" />
+    <script src="../_static/documentation_options.js?v=8d563738"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="contributing-to-pgmpy">
+<h1>Contributing to pgmpy<a class="headerlink" href="#contributing-to-pgmpy" title="Link to this heading">¶</a></h1>
+<p>Hi! Thanks for your interest in contributing to [pgmpy](pgmpy — pgmpy 0.1.0 documentation) :D .
+In this document we’ll try to summarize everything that you need to know to do a good job.</p>
+<section id="code-and-issues">
+<h2>Code and Issues<a class="headerlink" href="#code-and-issues" title="Link to this heading">¶</a></h2>
+<p>We use [Github](<a class="reference external" href="https://github.com/pgmpy/pgmpy">https://github.com/pgmpy/pgmpy</a>) to host our code repositories
+and issues.You can look at [issues](<a class="reference external" href="https://github.com/pgmpy/pgmpy/issues">https://github.com/pgmpy/pgmpy/issues</a>) to report any
+issues related to pgmpy. Here is a [guide](<a class="reference external" href="https://guides.github.com/features/issues/">https://guides.github.com/features/issues/</a>)
+on how to report better issues.</p>
+</section>
+<section id="git-and-our-branching-model">
+<h2>Git and our Branching model<a class="headerlink" href="#git-and-our-branching-model" title="Link to this heading">¶</a></h2>
+</section>
+<section id="git">
+<h2>Git<a class="headerlink" href="#git" title="Link to this heading">¶</a></h2>
+<p>We use [Git](<a class="reference external" href="http://git-scm.com/">http://git-scm.com/</a>) as our [version control
+system](<a class="reference external" href="http://en.wikipedia.org/wiki/Revision_control">http://en.wikipedia.org/wiki/Revision_control</a>), so the best way to
+contribute is to learn how to use it and put your changes on a Git repository.
+There are plenty of documentation about Git – you can start with the [Pro Git
+book](<a class="reference external" href="http://git-scm.com/book/">http://git-scm.com/book/</a>).
+Or You can go through the [try git tutorial](<a class="reference external" href="https://try.github.io/levels/1/challenges/1">https://try.github.io/levels/1/challenges/1</a>
+)</p>
+</section>
+<section id="forks-github-pull-requests">
+<h2>Forks + GitHub Pull requests<a class="headerlink" href="#forks-github-pull-requests" title="Link to this heading">¶</a></h2>
+<p>We use the famous
+[gitflow](<a class="reference external" href="http://nvie.com/posts/a-successful-git-branching-model/">http://nvie.com/posts/a-successful-git-branching-model/</a>) to manage our
+branches.</p>
+<p>Summary of our git branching model:
+- Fork the desired repository on GitHub to your account;
+- Clone your forked repository locally: <cite>git clone git&#64;github.com:your-username:repository-name.git</cite>;
+- Create a new branch off of <cite>develop</cite> with a descriptive name (for example: <cite>feature/portuguese-sentiment-analysis</cite>, <cite>hotfix/bug-on-downloader</cite>). You can do it by switching to <cite>develop</cite> branch (<cite>git checkout develop</cite>) and then creating a new branch (<cite>git checkout -b name-of-the-new-branch</cite>);
+- Do many small commits on that branch locally (<cite>git add files-changed</cite>, <cite>git commit -m “Add some change”</cite>);
+- Push to your fork on GitHub (with the name as your local branch: <cite>git push origin branch-name</cite>);
+- Create a pull request using the GitHub Web interface (asking us to pull the changes from your new branch and add the changes to our <cite>develop</cite> branch);
+- Wait for comments.</p>
+</section>
+<section id="tips">
+<h2>Tips<a class="headerlink" href="#tips" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Write [helpful commit messages](<a class="reference external" href="http://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message">http://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message</a>).</p></li>
+<li><p>Anything in the <cite>dev</cite> branch should be deployable (no failing tests).</p></li>
+<li><p>Never use <cite>git add .</cite>: it can add unwanted files;</p></li>
+<li><p>Avoid using <cite>git commit -a</cite> unless you know what you’re doing;</p></li>
+<li><p>Check every change with <cite>git diff</cite> before adding then to the index (stage area) and with <cite>git diff –cached</cite> before committing;</p></li>
+<li><p>If you have push access to the main repository, please do not commit directly to <cite>dev</cite>: your access should be used only to accept pull requests; if you want to make a new feature, you should use the same process as other developers so that your code can be reviewed.</p></li>
+</ul>
+</section>
+<section id="code-guidelines">
+<h2>Code Guidelines<a class="headerlink" href="#code-guidelines" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>We use [PEP8](<a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">http://www.python.org/dev/peps/pep-0008/</a>);</p></li>
+<li><p>We permit 120 characters in a line, rather 79 as suggested in PEP8</p></li>
+<li><p>Write tests for your new features (please see “Tests” topic below);</p></li>
+<li><p>Always remember that [commented code is dead code](<a class="reference external" href="http://www.codinghorror.com/blog/2008/07/coding-without-comments.html">http://www.codinghorror.com/blog/2008/07/coding-without-comments.html</a>);</p></li>
+<li><p>Name identifiers (variables, classes, functions, module names) with readable names (<cite>x</cite> is always wrong);</p></li>
+<li><p>When manipulating strings, use [Python’s new-style formatting](<a class="reference external" href="http://docs.python.org/library/string.html#format-string-syntax">http://docs.python.org/library/string.html#format-string-syntax</a>) (<cite>‘{} = {}’.format(a, b)</cite> instead of <cite>‘%s = %s’ % (a, b)</cite>);</p></li>
+<li><p>When working with files use <cite>with open(&lt;filename&gt;, &lt;option&gt;) as f</cite> instead of ` f = open(&lt;filename&gt;, &lt;option&gt;)`;</p></li>
+<li><p>All <cite>#TODO</cite> comments should be turned into issues (use our [GitHub issue system](<a class="reference external" href="https://github.com/pgmpy/pgmpy/issues">https://github.com/pgmpy/pgmpy/issues</a>));</p></li>
+<li><p>Run all tests before pushing (just execute <cite>nosetests</cite>) so you will know if your changes broke something;</p></li>
+<li><p>Try to write both Python 2 and Python3-friendly code so won’t be a pain for us to support both versions.We use [six](<a class="reference external" href="https://pypi.python.org/pypi/six">https://pypi.python.org/pypi/six</a>) to help us in integration across various python versions.</p></li>
+</ul>
+</section>
+<section id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Link to this heading">¶</a></h2>
+<p>We use [Travis CI](<a class="reference external" href="https://travis-ci.org/">https://travis-ci.org/</a>) for continuous integration
+and python [unittest module](<a class="reference external" href="https://docs.python.org/2/library/unittest.html">https://docs.python.org/2/library/unittest.html</a>) for writing tests.
+You should write tests for every feature you add or bug you solve in the code.
+Having automated tests for every line of our code let us make big changes
+without worries: there will always be tests to verify if the changes introduced
+bugs or lack of features. If we don’t have tests we will be blind and every
+change will come with some fear of possibly breaking something.</p>
+<p>For a better design of your code, we recommend using a technique called
+[test-driven development](<a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">https://en.wikipedia.org/wiki/Test-driven_development</a>),
+where you write your tests <strong>before</strong> writing the actual code that implements
+the desired feature.</p>
+</section>
+<section id="discussion">
+<h2>Discussion<a class="headerlink" href="#discussion" title="Link to this heading">¶</a></h2>
+<p>Please feel free to contact us through mail list if
+you have any questions or suggestions.
+Connect with us at [gitter](<a class="reference external" href="https://gitter.im/pgmpy/pgmpy">https://gitter.im/pgmpy/pgmpy</a>).
+Every contribution is very welcome!</p>
+<p><em>Mailing list</em> : <a class="reference external" href="mailto:pgmpy&#37;&#52;&#48;googlegroups&#46;com">pgmpy<span>&#64;</span>googlegroups<span>&#46;</span>com</a></p>
+<p>Happy hacking! ;)</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo" />
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="base.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../base/base.html">Base Model Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/base.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../factors/base.html">Parameterization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exact_infer/base.html">Exact Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../approx_infer/base.html">Approximate Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../param_estimator/base.html">Parameter Estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../structure_estimator/base.html">Causal Discovery / Structure Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics/metrics.html">Metrics for Testing Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readwrite/base.html">Reading/Writing to File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plotting.html">Plotting Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Example Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial Notebooks</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+<script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+
+<div data-ea-publisher="pgmpyorg" data-ea-type="image" data-ea-style="horizontal"></div><script async src="https://www.googletagmanager.com/gtag/js?id=G-HCFR07M31W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HCFR07M31W');
+</script>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Ankur Ankan.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/started/contributing.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
